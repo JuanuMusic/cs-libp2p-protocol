@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp1.1;net461</TargetFrameworks>
-    <RuntimeIdentifiers>win7-x64;osx-64;linux-x64</RuntimeIdentifiers>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AssemblyName>LibP2P.Protocol.Tests</AssemblyName>
     <PackageId>LibP2P.Protocol.Tests</PackageId>
@@ -21,14 +21,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
-    <PackageReference Include="xunit" Version="2.2.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
-    <PackageReference Include="xunit.runner.console" Version="2.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\LibP2P.Protocol\LibP2P.Protocol.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="NUnit" />
+    <None Remove="NUnit3TestAdapter" />
+  </ItemGroup>
 </Project>
